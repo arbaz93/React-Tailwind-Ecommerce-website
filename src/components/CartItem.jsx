@@ -4,8 +4,8 @@ export default function CartItem( { cartItem, removeItemFromCart } ) {
   return (
     <div className='flex justify-between gap-4'>
         <div className="flex gap-1">
-            <img className='w-10' src={cartItem.url} alt={cartItem.title} />
-            <div>
+            <img className='w-12' src={cartItem.url} alt={cartItem.title} />
+            <div className='flex flex-col gap-2 justify-center'>
                 <p className="text-[14px] max-w-30">{cartItem.title}</p>
                 <p className="text-[14px] font-bold">{cartItem.price}</p>
             </div>

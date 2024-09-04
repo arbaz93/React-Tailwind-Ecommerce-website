@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import LeftPanel from './components/LeftPanel'
 import ItemsGrid from './components/ItemsGrid'
-import { items } from './utils/itemsData'
+import { itemsData } from './utils/itemsData'
 import Navigation from './components/Navigation'
 function App() {
   const [cartItems, setCartItems] = useState(localStorage.getItem('CART_ITEMS') ? JSON.parse(localStorage.getItem('CART_ITEMS')) : []);
-  const [showCart, setShowCart] = useState(true)
+  const [showCart, setShowCart] = useState(false)
+  const [items, setItems] = useState(itemsData)
 
   useEffect(() => {
     // const localItems = localStorage.getItem('CART_ITEMS');
@@ -26,7 +27,7 @@ function App() {
     <>
       <Navigation cartItems={cartItems} showCart={showCart} setShowCart={setShowCart} removeItemFromCart={removeItemFromCart}/>
       <main className='min-h-full flex flex-col sm:flex-row '>
-        <LeftPanel setShowCart={setShowCart} />
+        <LeftPanel setShowCart={setShowCart} itemsData={itemsData} setItems={setItems}/>
         <ItemsGrid setShowCart={setShowCart} items={items} addItemToCart={addItemToCart} />
       </main>
     </>

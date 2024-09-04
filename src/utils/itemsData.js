@@ -1,4 +1,4 @@
-export const items = [
+export const itemsData = [
     {
         "title": "skater black sweatshirt",
         "price": "25.90",
