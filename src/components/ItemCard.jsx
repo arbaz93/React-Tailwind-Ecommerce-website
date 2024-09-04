@@ -1,7 +1,7 @@
 import React from 'react'
 import AddToCartButton from './AddToCartButton'
 
-export default function ItemCard({ item }) {
+export default function ItemCard({ item, addItemToCart }) {
   let price = item.price.split('.')
 
   function animateChangeOrigin(e) {
@@ -21,7 +21,7 @@ export default function ItemCard({ item }) {
         <div className='h-1 w-5 rounded-sm bg-yellow-300'></div>
       </div>
       <p className='text-sm font-semibold '>$<span className='text-lg font-bold'>{price[0]}</span>.{price[1]}</p>
-      <AddToCartButton />
+      <AddToCartButton id={item.id} addItemToCart={addItemToCart}/>
     </div>
   )
 }
