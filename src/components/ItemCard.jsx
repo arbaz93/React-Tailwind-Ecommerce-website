@@ -2,7 +2,7 @@ import React from 'react'
 import AddToCartButton from './AddToCartButton'
 
 export default function ItemCard({ item, addItemToCart }) {
-  let price = item.price.split('.')
+  let price = String(item.price).split('.');
 
   function animateChangeOrigin(e) {
     let image = e;

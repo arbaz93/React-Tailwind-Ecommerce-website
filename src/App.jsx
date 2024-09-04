@@ -20,7 +20,17 @@ function App() {
     setCartItems([...cartItems, ...newItem]);
   }
   function removeItemFromCart(id) {
-    const newCart = cartItems.filter(cartItem => cartItem.id != id);
+    let removed = false;
+    const newCart = cartItems.filter(cartItem => {
+      if (removed) {
+        return true;
+      }
+      if (cartItem.id == id) {
+        removed = true;
+        return false
+      }
+      return true;
+    });
     setCartItems(newCart)
   }
   return (

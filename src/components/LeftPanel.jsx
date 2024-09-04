@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function LeftPanel({ setShowCart, itemsData, setItems }) {
   const sizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
-
-  function handleFilterBySize(size) {
+    
+    function handleFilterBySize(size) {
     
     const filteredItems = itemsData.filter(item => item['size'].includes(size));
     console.log(filteredItems)
