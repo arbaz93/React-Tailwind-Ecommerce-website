@@ -6,7 +6,6 @@ export default function LeftPanel({ setShowCart, itemsData, setItems }) {
     function handleFilterBySize(size) {
     
     const filteredItems = itemsData.filter(item => item['size'].includes(size));
-    console.log(filteredItems)
     setItems(filteredItems)
   }
   return (
@@ -19,7 +18,7 @@ export default function LeftPanel({ setShowCart, itemsData, setItems }) {
             {size}
           </button>)
         })}
-        <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p className="mt-6 w-full text-[13px]">Lorem ipsum dolor sit amet consectetur adipisicing elit :)</p>
       </div>
     </div>
   )
