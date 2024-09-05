@@ -35,10 +35,12 @@ function App() {
   }
   return (
     <>
+      <div id='top'></div>
       <Navigation cartItems={cartItems} showCart={showCart} setShowCart={setShowCart} removeItemFromCart={removeItemFromCart}/>
       <main className='min-h-full flex flex-col sm:flex-row '>
         <LeftPanel setShowCart={setShowCart} itemsData={itemsData} setItems={setItems}/>
         <ItemsGrid setShowCart={setShowCart} items={items} addItemToCart={addItemToCart} />
+        <a href='#top' className='fixed flex justify-center items-center bottom-4 right-2 w-4 h-4 text-base text-black border-black border-solid border rounded-[50%] aspect-square'><i className="fa-solid fa-caret-up"></i></a>
       </main>
     </>
   )

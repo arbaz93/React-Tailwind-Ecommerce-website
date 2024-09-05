@@ -8,7 +8,9 @@ export default function CartBox({ cartItems, removeItemFromCart }) {
             return (
                 <CartItem cartItem={cartItem} key={i} removeItemFromCart={removeItemFromCart}/>
             )   
-        })}
+        })
+        }
+        {cartItems.length === 0 ? "" : <button className='w-full py-2 bg-slate-300 hover:bg-slate-500 duration-200 text-white'>Order</button>}
     </div>
   )
 }
