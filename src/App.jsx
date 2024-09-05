@@ -40,7 +40,7 @@ function App() {
       <main className='min-h-full flex flex-col sm:flex-row '>
         <LeftPanel setShowCart={setShowCart} itemsData={itemsData} setItems={setItems}/>
         <ItemsGrid setShowCart={setShowCart} items={items} addItemToCart={addItemToCart} />
-        <a href='#top' className='fixed flex justify-center items-center bottom-4 right-2 w-6 h-6 text-base text-black border-black border-solid border rounded-[50%] aspect-square'><i className="fa-solid fa-caret-up"></i></a>
+        <a href='#top' className='fixed flex justify-center items-center bottom-4 right-2 w-6 h-6 text-base bg-white text-black border-black border-solid border rounded-[50%] aspect-square'><i className="fa-solid fa-caret-up"></i></a>
       </main>
     </>
   )

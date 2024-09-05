@@ -19,6 +19,7 @@ export default function LeftPanel({ setShowCart, itemsData, setItems }) {
             {size}
           </button>)
         })}
+        <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
   )
